@@ -18,15 +18,15 @@ class Warlock {
 		void			setTitle(std::string const &new_title);
 		void			introduce(void) const;
 		void			learnSpell(ASpell *spell);
-		void			forgetSpell(std::string name);
-		void			launchSpell(std::string name, ATarget const &target);
+		void			forgetSpell(std::string const &name);
+		void			launchSpell(std::string const &name, ATarget const &target);
 	private:
 		std::string			_name;
 		std::string			_title;
 		std::map<std::string, ASpell*>	_spells; 
-		Warlock(void);
 		Warlock(Warlock const &src);
 		Warlock&		operator=(Warlock const &rhs);
+		Warlock(void);
 };
 
 #endif
